@@ -1,5 +1,5 @@
 import React from "react";
-
+import ChildComponent from "../ChildComponent";
 class MyComponent extends React.Component {
     state = {
         firstName: '',
@@ -22,7 +22,7 @@ class MyComponent extends React.Component {
   render() {
     console.log('>>> Call render: ', this.state);
     return (
-        <div>
+        <React.Fragment>
             <form>
                 <label for="fname">First name:</label>
                 <input type="text" value={this.state.firstName}
@@ -36,12 +36,11 @@ class MyComponent extends React.Component {
                     onClick={(event) => this.handleSubmit(event)}
                 />
             </form>
-        </div>
+            <ChildComponent name={'TuanTran'} age={'21'}></ChildComponent>
+            {/* chỉ có thể truyền từ cha xuống con, thằng này là cha */}
+        </React.Fragment>
     )
   }
 }
 
 export default MyComponent;
-// git branch video9
-// git branch -l
-// git checkout video9
