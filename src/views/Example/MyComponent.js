@@ -2,7 +2,7 @@ import React from "react";
 import ChildComponent from "./ChildComponent";
 class MyComponent extends React.Component {
     state = {
-        firstName: '',
+        firstName: 'Tuan',
         lastName: '',
         arrJob: [
             {id: 'job1', title: 'Developer', salary: '1000 $'},

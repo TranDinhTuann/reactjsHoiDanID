@@ -10,6 +10,7 @@ class ChildComponent extends React.Component {
     return (
         <React.Fragment>
             <div className="job-lists">
+              Name : {name} - age: {age} - address: {address}
               {
                 // a = arr...
                 arrJob.map((item, index) => {
