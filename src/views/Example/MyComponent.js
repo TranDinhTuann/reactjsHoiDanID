@@ -3,7 +3,12 @@ import ChildComponent from "./ChildComponent";
 class MyComponent extends React.Component {
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJob: [
+            {id: 'job1', title: 'Developer', salary: '1000 $'},
+            {id: 'job2', title: 'Tester', salary: '500 $'},
+            {id: 'job3', title: 'Manager', salary: '2000 $'}
+        ]
     }
     handleChangeFirstName = (event) =>{
         this.setState({
@@ -36,7 +41,12 @@ class MyComponent extends React.Component {
                     onClick={(event) => this.handleSubmit(event)}
                 />
             </form>
-            <ChildComponent name={'TuanTran'} age={'21'}></ChildComponent>
+            <ChildComponent 
+                name={this.state.firstName} 
+                age={'21'}
+                address={'Ha Noi'}
+                arrJob = {this.state.arrJob}
+            />
             {/* chỉ có thể truyền từ cha xuống con, thằng này là cha */}
         </React.Fragment>
     )
