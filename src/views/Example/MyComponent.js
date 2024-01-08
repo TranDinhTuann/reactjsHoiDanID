@@ -5,9 +5,9 @@ class MyComponent extends React.Component {
         firstName: 'Tuan',
         lastName: '',
         arrJob: [
-            {id: 'job1', title: 'Developer', salary: '1000 $'},
-            {id: 'job2', title: 'Tester', salary: '500 $'},
-            {id: 'job3', title: 'Manager', salary: '2000 $'}
+            {id: 'job1', title: 'Developer', salary: '1000'},
+            {id: 'job2', title: 'Tester', salary: '500'},
+            {id: 'job3', title: 'Manager', salary: '2000'}
         ]
     }
     handleChangeFirstName = (event) =>{
