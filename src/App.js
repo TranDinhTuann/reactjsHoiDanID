@@ -21,3 +21,7 @@ function App() {
 }
 
 export default App;
+// git branch video9
+// git branch -l
+// git checkout video9
+// git push origin video9
