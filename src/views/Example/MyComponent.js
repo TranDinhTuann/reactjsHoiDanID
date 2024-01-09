@@ -16,6 +16,13 @@ class MyComponent extends React.Component {
             arrJob : [...this.state.arrJob, job ]
         })
     }
+    deleteAJob = (job) => {
+        let currentJob = this.state.arrJob;
+        currentJob = currentJob.filter(item => item.id !== job.id);
+        this.setState({
+            arrJob: currentJob
+        })
+    }
 
   render() {
     // console.log('>>> Call render: ', this.state);
@@ -26,6 +33,7 @@ class MyComponent extends React.Component {
             />
             <ChildComponent
                 arrJob = {this.state.arrJob}
+                deleteAJob = {this.deleteAJob}
             />
             {/* chỉ có thể truyền từ cha xuống con, thằng này là cha */}
         </React.Fragment>
